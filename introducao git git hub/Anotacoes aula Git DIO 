@@ -14,21 +14,13 @@ git vai conhecer a assinatura da maquina
 
 processo pra se gerar uma chave é feito pelo git bash no windows que nada mais é q um sistema linux no windows.
 
-terminal:
+terminal
 
-ssh-keygen -t ed25519 -C paulabrcandido@gmail.com
+Depois de gerado a chave vc abre a pasta para ver se esta criada
 
-Depois de gerado a chave vc abre a pasta para ver se esta criada:
-
-/home/paula/.ssh/id_ed25519
-
-
-/home/paula# ls -a
-id_ed25519  id_ed255519.pub  //Tem q aparecer 2 chaves a publica e aprivada
+ //Tem q aparecer 2 chaves a publica e aprivada
 
 digita o comando para exibir a chave publica
-
-cat id_ed25519.pub
 
 ai ele vai exibir a chave publica e é isso q vc usa para colar no git new ssh key -> titulo -> chave -> cola ele no key e cria um titulo q seja explicativo
 
@@ -40,14 +32,8 @@ eval $(ssh-agent -s)
 
 ele vai gerar um agent e um pid, ai vc passa a chave privada pra ele, q o agente vai ser o responsavel por descriptografar para sua maquina oq vier
 
-
-
-
-
-
-
-Your identification has been saved in /root/.ssh/id_ed25519
-Your public key has been saved in /root/.ssh/id_ed25519.pub
+Your identification has been saved in 
+Your public key has been saved in 
 
 
 linux comandos:
@@ -84,7 +70,7 @@ home cria a pasta workpace, depois cria uma pasta dentro dela livro-receitas, de
 
 antes de criar o arquivo tem q criar a configuracoes iniciais, pq quano o obj comit criado é criado com um autor,
 
-git config --global user.email "paulabrcandido@gmail.com"
+git config --global user.email "XXXX.com"
 
 e o user
 
