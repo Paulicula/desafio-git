@@ -1,0 +1,104 @@
+sistema de versionamento de cogido distribuido/ ajudando monitorar e criar codigos dentro de nossa maquina
+Linus Torval // criador do linux
+tarballs patches
+
+SHA 1 : algoritimo de encryptacao desenvolvdo pela nsa
+encriptacao gera 40 digitos/ forma curta de representar um arquivo
+Git Bash/ botao direito/ options/ escolher tema
+openss1 sha1 texto.txt
+
+chaves SSH e Tokens
+chave ssh forma de estabelecer uma conexao segura entre duas maquinas , 2 chaves, chave segura e chave publica
+
+git vai conhecer a assinatura da maquina
+
+processo pra se gerar uma chave é feito pelo git bash no windows que nada mais é q um sistema linux no windows.
+
+terminal:
+
+ssh-keygen -t ed25519 -C paulabrcandido@gmail.com
+
+Depois de gerado a chave vc abre a pasta para ver se esta criada:
+
+/home/paula/.ssh/id_ed25519
+
+
+/home/paula# ls -a
+id_ed25519  id_ed255519.pub  //Tem q aparecer 2 chaves a publica e aprivada
+
+digita o comando para exibir a chave publica
+
+cat id_ed25519.pub
+
+ai ele vai exibir a chave publica e é isso q vc usa para colar no git new ssh key -> titulo -> chave -> cola ele no key e cria um titulo q seja explicativo
+
+ls ou pwd (mostrar o caminho completo
+
+a gente inicializa ssh agent q entidade q vai lidar com as chaves
+
+eval $(ssh-agent -s)
+
+ele vai gerar um agent e um pid, ai vc passa a chave privada pra ele, q o agente vai ser o responsavel por descriptografar para sua maquina oq vier
+
+
+
+
+
+
+
+Your identification has been saved in /root/.ssh/id_ed25519
+Your public key has been saved in /root/.ssh/id_ed25519.pub
+
+
+linux comandos:
+cd          (change director, navedgar nas pasta entras ou voltar)
+ls
+mkdir    (criar diretorios)
+rm -rf nomedapasta/ (deleta todas as pastas contidas la dentro)
+
+clear ou ctrl + l
+tab (completa a palavra)
+
+windows comando
+cd
+dir
+mkdir
+del / rmdir
+
+cls
+echo (printa na tela oq eu falei)
+echo hello > hello.txt (checa e nao tendo o arquivo ele cria o arquivo)
+
+del nomedapasta (deleta os arquivos dentro da pasta)
+rmdir nomedapasta /S /Q  (deleta a pasta)
+
+
+
+arquivo markdown ( .md) , forma mais humana de escrever html
+#titulo nivel 1 //maior letra
+##titulo nivel 2
+###titulo nivel 3... //menor letra
+
+
+home cria a pasta workpace, depois cria uma pasta dentro dela livro-receitas, depois inicia o git init dentro desta pasta, (para verificar ls -a que ve os arquivos ocultos)
+
+antes de criar o arquivo tem q criar a configuracoes iniciais, pq quano o obj comit criado é criado com um autor,
+
+git config --global user.email "paulabrcandido@gmail.com"
+
+e o user
+
+git config --global user.name paula
+
+agora cria um, arquivo dentro dessa pasta
+
+
+git add *
+
+git commit -m "commit inicial"
+
+
+
+
+ 
+
